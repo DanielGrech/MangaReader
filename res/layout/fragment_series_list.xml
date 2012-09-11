@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="outsideOverlay"
+        android:horizontalSpacing="8dip"
+        android:verticalSpacing="8dip"
+        android:padding="8dip"
+        android:numColumns="@integer/series_list_column_count"
+        android:fastScrollEnabled="true"
+        android:divider="@color/border_color"
+        android:listSelector="@drawable/selectable_background_manga_reader"
+        android:cacheColorHint="@android:color/transparent"/>
+
+    <!--TODO: Empty View-->
+    <ViewStub
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

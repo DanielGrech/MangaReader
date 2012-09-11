@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<searchable xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:label="@string/app_name"
+    android:hint="@string/search_series_hint"
+    android:searchSuggestAuthority="com.dgsd.android.MangaReader.Data.MangaProvider"
+    android:searchSuggestIntentAction="android.intent.action.SEARCH"
+    android:voiceSearchMode="launchRecognizer"
+    android:includeInGlobalSearch="true"
+    android:searchSettingsDescription="@string/search_series_description"
+    android:searchMode="queryRewriteFromText" />

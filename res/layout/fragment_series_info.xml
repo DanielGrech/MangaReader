@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/loading_wrapper"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        layout="@layout/loading"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+
+            <com.dgsd.android.MangaReader.View.ReflectiveRemoteImageView
+                android:id="@+id/image"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:paddingTop="16dip"
+                android:scaleType="fitXY"/>
+
+            <ScrollView
+                android:id="@+id/scroller"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/author"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"/>
+
+                    <TextView
+                        android:id="@+id/created"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"/>
+
+                    <TextView
+                        android:id="@+id/last_chapter_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"/>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dip"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chapters_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chapters"
+            android:visibility="gone"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            style="@style/manga_reader_title_style"/>
+
+        <LinearLayout
+            android:id="@+id/list_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:layout_weight="1">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarStyle="outsideOverlay"
+                android:fastScrollEnabled="true"
+                android:divider="@android:color/transparent"
+                android:listSelector="@drawable/selectable_background_manga_reader"
+                android:cacheColorHint="@android:color/transparent"/>
+
+            <!--TODO: Empty View-->
+            <ViewStub
+                android:id="@android:id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout="@layout/empty_chapters"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

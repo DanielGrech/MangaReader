@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Manga Reader</string>
+
+    <string name="search">Search</string>
+    <string name="about">About</string>
+    <string name="chapters">Chapters</string>
+    <string name="loading">Loading</string>
+    <string name="favourite">Favourite</string>
+    <string name="share">Share</string>
+    <string name="no_chapters">No chapters</string>
+    <string-array name="main_nav_items">
+        <item>@string/app_name</item>
+        <item>Favourites</item>
+    </string-array>
+
+    <string name="search_series_hint">Search manga series</string>
+    <string name="search_series_description">Search available manga series</string>
+</resources>
